@@ -1,5 +1,5 @@
 def starts_with_a_vowel?(word)
-  if word.match(/\A+[aeiou]/) == nil
+  if word.match(/\A[aeiou]/) == nil
     return false
   else
     return true
@@ -15,7 +15,7 @@ def words_five_letters_long(text)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-  (text.match(/\A[A-Z]/) && text.match(/\z\W/)) == true
+  (text.match(/\A[A-Z]/) && text.match(/\W$/)) == true
 end
 
 def valid_phone_number?(phone)
